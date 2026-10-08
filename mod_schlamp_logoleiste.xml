@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_SCHLAMP_LOGOLEISTE</name>
+    <author>Schlamp Immobilien</author>
+    <creationDate>2026-10-02</creationDate>
+    <version>1.1.0</version>
+    <description>MOD_SCHLAMP_LOGOLEISTE_XML_DESCRIPTION</description>
+    <license>GNU General Public License version 2 or later</license>
+    <namespace path="src">Schlamp\Module\Logoleiste</namespace>
+    <files>
+        <folder module="mod_schlamp_logoleiste">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <filename>mod_schlamp_logoleiste.xml</filename>
+    </files>
+    <media destination="mod_schlamp_logoleiste" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+    <languages>
+        <language tag="de-DE">language/de-DE/mod_schlamp_logoleiste.ini</language>
+        <language tag="de-DE">language/de-DE/mod_schlamp_logoleiste.sys.ini</language>
+        <language tag="en-GB">language/en-GB/mod_schlamp_logoleiste.ini</language>
+        <language tag="en-GB">language/en-GB/mod_schlamp_logoleiste.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="MOD_SCHLAMP_LOGOLEISTE_CONTENT">
+                <field name="folder" type="text" default="images/logoleiste" filter="string" label="MOD_SCHLAMP_LOGOLEISTE_FOLDER" description="MOD_SCHLAMP_LOGOLEISTE_FOLDER_DESC" required="true" />
+                <field name="links" type="textarea" rows="9" filter="string" label="MOD_SCHLAMP_LOGOLEISTE_LINKS" description="MOD_SCHLAMP_LOGOLEISTE_LINKS_DESC" />
+                <field name="new_window" type="radio" layout="joomla.form.field.radio.switcher" default="0" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_TARGET">
+                    <option value="0">JNO</option><option value="1">JYES</option>
+                </field>
+                <field name="label" type="text" filter="string" label="MOD_SCHLAMP_LOGOLEISTE_LABEL" />
+            </fieldset>
+            <fieldset name="appearance" label="MOD_SCHLAMP_LOGOLEISTE_APPEARANCE">
+                <field name="width" type="number" default="0" min="0" max="1200" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_WIDTH" description="MOD_SCHLAMP_LOGOLEISTE_WIDTH_DESC" />
+                <field name="visible_desktop" showon="width:0" type="number" default="6" min="1" max="12" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_DESKTOP" />
+                <field name="visible_tablet" showon="width:0" type="number" default="3" min="1" max="12" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_TABLET" description="MOD_SCHLAMP_LOGOLEISTE_TABLET_DESC" />
+                <field name="visible_mobile" showon="width:0" type="number" default="2" min="1" max="12" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_MOBILE" description="MOD_SCHLAMP_LOGOLEISTE_MOBILE_DESC" />
+                <field name="duration" type="number" default="30" min="5" max="300" step="1" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_DURATION" description="MOD_SCHLAMP_LOGOLEISTE_DURATION_DESC" />
+                <field name="height" description="MOD_SCHLAMP_LOGOLEISTE_HEIGHT_DESC" type="number" default="120" min="30" max="300" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_HEIGHT" />
+                <field name="gap" type="number" default="40" min="0" max="120" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_GAP" />
+                <field name="padding" type="number" default="0" min="0" max="150" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_PADDING" />
+                <field name="background_enabled" type="radio" layout="joomla.form.field.radio.switcher" default="0" filter="integer" label="MOD_SCHLAMP_LOGOLEISTE_BACKGROUND"><option value="0">JNO</option><option value="1">JYES</option></field>
+                <field name="background_color" type="color" default="#ffffff" filter="string" showon="background_enabled:1" label="MOD_SCHLAMP_LOGOLEISTE_BACKGROUND_COLOR" />
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" class="form-select" validate="moduleLayout" />
+                <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" />
+                <field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" filter="integer">
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                </field>
+                <field name="cache_time" type="number" default="900" min="0" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" filter="integer" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

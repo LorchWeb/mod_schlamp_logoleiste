@@ -43,3 +43,7 @@ $label = trim((string) $params->get('label', '')) ?: Text::_('MOD_SCHLAMP_LOGOLE
         </div>
     </div>
 </section>
+<div class="schlamp-logos__credit">
+    <?= $escape(Text::_('MOD_SCHLAMP_LOGOLEISTE_CREDIT')) ?>
+    <a href="https://alpenrand-digital.de" target="_blank" rel="noopener noreferrer"><?= $escape(Text::_('MOD_SCHLAMP_LOGOLEISTE_CREDIT_NAME')) ?></a>
+</div>

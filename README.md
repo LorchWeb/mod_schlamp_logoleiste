@@ -1,13 +1,13 @@
-# Joomla-Logoleiste
+# Mod-Logo-Leiste
 
 Ein einfaches Joomla-5-Modul für eine kontinuierlich nach links laufende Logoleiste. PHP 8.3 oder höher erforderlich.
 
 ## Installation
 
-Die fertige `mod_schlamp_logoleiste-1.1.0.zip` unter [Releases](https://github.com/LorchWeb/mod_schlamp_logoleiste/releases) herunterladen und in Joomla installieren. Die automatisch von GitHub angebotene Quellcode-ZIP ist nicht das Installationspaket.
+Die fertige `Mod-Logo-Leiste-1.1.1.zip` unter [Releases](https://github.com/LorchWeb/mod_schlamp_logoleiste/releases) herunterladen und in Joomla installieren. Die automatisch von GitHub angebotene Quellcode-ZIP ist nicht das Installationspaket.
 
 1. Bilder im Medienmanager nach `images/logoleiste` hochladen.
-2. Site-Modul **Schlamp – Logoleiste** veröffentlichen, Templateposition und Menüzuweisung festlegen.
+2. Site-Modul **Mod-Logo-Leiste** veröffentlichen, Templateposition und Menüzuweisung festlegen.
 3. Bilderordner, Bildmaße oder sichtbare Anzahl sowie Umlaufdauer einstellen.
 
 Updates über das vorhandene Modul installieren; keine vorherige Deinstallation nötig. Nach Updates gegebenenfalls Joomla- und Browsercache leeren.
@@ -54,17 +54,18 @@ Unter Windows einen passenden temporären Ordner statt `/tmp/logoleiste-preview`
 Das Installationspaket enthält ausschließlich Manifest, `services`, `src`, `tmpl`, `language` und `media`. Nach dem Commit lässt es sich aus dem Repository erstellen:
 
 ```sh
-git archive --format=zip --output=mod_schlamp_logoleiste.zip HEAD mod_schlamp_logoleiste.xml services src tmpl language media
+git archive --format=zip --output=Mod-Logo-Leiste-1.1.1.zip HEAD mod_schlamp_logoleiste.xml services src tmpl language media
 ```
 
-Version 1.1.0 wurde lokal mit 34 PHP-Prüfungen und 38 Chromium-Prüfungen getestet. Die Darstellung im jeweiligen Joomla-Template muss zusätzlich geprüft werden.
+Version 1.1.1 ergänzt die neutrale Bezeichnung und einen unaufdringlichen Link „Ein Projekt von Alpenrand Digital“ unter der Leiste. Die Darstellung im jeweiligen Joomla-Template muss zusätzlich geprüft werden.
 
 ## Versionen
 
+- **1.1.1**: neutraler Anzeigename „Mod-Logo-Leiste“, Alpenrand-Digital-Referenz im Modul und in der Urheberangabe, versionsübergreifend installierbares Update.
 - **1.1.0**: feste Logobreite, exakte Bildfläche ohne inneren 4-px-Abstand, transparenter/optionaler Hintergrund, Pauseknopf entfernt, lückenlose Wiederholung kurzer Bildfolgen.
 - **1.0.0**: ursprüngliche Logoleiste mit Bilderordner, optionalen Links und responsiver Anzahl.
 
-Die Git-Historie beginnt mit dem vorhandenen Stand 1.1.0; ältere Entwicklungsschritte wurden nicht nachträglich rekonstruiert.
+Die Joomla-Erweiterungskennung `mod_schlamp_logoleiste` und das GitHub-Repository behalten aus Update-Kompatibilitätsgründen ihren bisherigen technischen Namen. Der angezeigte Modulname und die Urheberangabe sind neutral gehalten.
 
 ## Lizenz
 

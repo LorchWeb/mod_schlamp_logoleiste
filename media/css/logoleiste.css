@@ -12,6 +12,8 @@
 .schlamp-logos.is-running .schlamp-logos__item { width: var(--sl-item-width); flex: 0 0 var(--sl-item-width); }
 .schlamp-logos.is-offscreen .schlamp-logos__track { animation-play-state: paused; }
 .schlamp-logos__sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.schlamp-logos__credit { margin-top: .25rem; font-size: .75rem; line-height: 1.4; text-align: right; opacity: .7; }
+.schlamp-logos__credit a { color: inherit; text-decoration: underline; text-underline-offset: .15em; }
 @keyframes schlamp-logo-scroll { to { transform: translateX(var(--sl-end, -50%)); } }
 @container (max-width: 991px) { .schlamp-logos__viewport { --sl-visible: var(--sl-tablet); } }
 @container (max-width: 575px) { .schlamp-logos__viewport { --sl-visible: var(--sl-mobile); } }

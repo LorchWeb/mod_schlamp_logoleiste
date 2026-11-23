@@ -71,6 +71,8 @@ namespace {
         $html = $render($logos, $params);
         $check(str_contains($html, 'a=1&amp;b=2') && str_contains($html, 'Haus &amp; Grund'), 'Output escaping');
         $check(str_contains($html, 'aria-label="Partner und Mitgliedschaften"'), 'Default region label');
+        $check(str_contains($html, 'Ein Projekt von') && str_contains($html, 'href="https://alpenrand-digital.de" target="_blank" rel="noopener noreferrer"'), 'Alpenrand Digital credit link');
+        $check(str_contains($html, 'Alpenrand Digital'), 'Alpenrand Digital credit name');
         $check($render([], $params) === '', 'No markup for empty folder');
         $hostile = $render([['src' => 'x" onerror="alert(1)', 'alt' => '<script>bad</script>', 'url' => '/?x="bad']], new Registry(['label' => '"<test>', 'duration' => -100, 'new_window' => 1]));
         $check(!str_contains($hostile, '<script>') && !str_contains($hostile, ' onerror="'), 'Attribute and text injection escaped');

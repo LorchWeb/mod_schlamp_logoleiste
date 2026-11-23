@@ -15,6 +15,9 @@ const assert = require('node:assert/strict');
         page.on('pageerror', (error) => errors.push(error.message));
         await page.goto(url);
         await page.locator('.is-running').first().waitFor();
+        const credit = page.locator('.schlamp-logos__credit a').first();
+        check(await credit.getAttribute('href') === 'https://alpenrand-digital.de', 'Alpenrand Digital credit target');
+        check((await credit.innerText()).trim() === 'Alpenrand Digital', 'Alpenrand Digital credit label');
         const root = page.locator('.schlamp-logos').first();
         const track = root.locator('.schlamp-logos__track');
         const state = () => root.evaluate((element) => {

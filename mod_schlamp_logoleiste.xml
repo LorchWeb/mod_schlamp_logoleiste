@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" client="site" method="upgrade">
     <name>MOD_SCHLAMP_LOGOLEISTE</name>
-    <author>Schlamp Immobilien</author>
-    <creationDate>2026-10-02</creationDate>
-    <version>1.1.0</version>
+    <author>Alpenrand Digital</author>
+    <creationDate>2026-11-23</creationDate>
+    <version>1.1.1</version>
     <description>MOD_SCHLAMP_LOGOLEISTE_XML_DESCRIPTION</description>
     <license>GNU General Public License version 2 or later</license>
     <namespace path="src">Schlamp\Module\Logoleiste</namespace>
